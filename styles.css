@@ -43,9 +43,9 @@ main {
 
 footer {
   text-align: center;
+  padding: 0.5em;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
   margin-top: 1em;
   margin-bottom: 1em;
-}
-footer p {
-  margin: 0.5em;
 }
