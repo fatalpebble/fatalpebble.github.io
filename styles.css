@@ -1,19 +1,37 @@
 /* colors from https://hig.kde.org/style/color/dark.html */
+:root {
+  --near-white: rgb(239, 240, 241);
+  --light-gray: rgb(189, 195, 199);
+  --dark-gray: rgb(35, 38, 41);
+  --yellow: rgb(253, 188, 75);
+  --red: rgb(218, 68, 83);
+}
+
+.dark-themed {
+  background-color: var(--dark-gray);
+  color: var(--near-white);
+}
+.dark-themed a {
+  color: var(--near-white);
+}
+.dark-themed a:focus, .dark-themed a:hover {
+  color: var(--yellow);
+}
+.dark-themed a:active {
+  color: var(--red);
+}
 
 * {
   margin: 0;
 }
 
 body {
-  background-color: rgb(239, 240, 241);
-
   font-family: sans-serif;
+
+  background-color: var(--light-gray);
 }
 
 header {
-  color: rgb(239, 240, 241);
-  background-color: rgb(35, 38, 41);
-
   text-align: center;
 }
 header h1 {
@@ -21,18 +39,28 @@ header h1 {
 }
 
 main {
-  max-width: 960px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
 article {
-  margin-left: 1.3em;
-  margin-right: 1.3em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1.3em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+
+  width: 37em;
+
+  background-color: var(--near-white);
 }
-article h2, article p {
+article p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -43,9 +71,5 @@ article img {
 
 footer {
   text-align: center;
-  padding: 0.5em;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding: 0.7em;
 }
