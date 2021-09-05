@@ -1,24 +1,17 @@
-/* colors from https://hig.kde.org/style/color/dark.html */
+/* colors from https://develop.kde.org/hig/style/color/dark/ */
 :root {
-  --near-white: rgb(239, 240, 241);
-  --light-gray: rgb(189, 195, 199);
-  --dark-gray: rgb(35, 38, 41);
-  --yellow: rgb(253, 188, 75);
-  --red: rgb(218, 68, 83);
-}
+  --near-white: rgb(239, 240, 241); /* cardboard gray */
+  --lighter-gray: rgb(189, 195, 199); /* alternate gray */
+  --light-gray: rgb(175, 176, 179); /* lazy gray */
+  --gray: rgb(127, 140, 141); /* coastal fog */
+  --dark-gray: rgb(77, 77, 77); /* icon gray */
+  --darker-gray: rgb(59, 64, 69); /* burnt charcoal */
+  --darkest-gray: rgb(49, 54, 59); /* charcoal gray */
+  --near-black: rgb(35, 38, 41); /* [no name] */
 
-.dark-themed {
-  background-color: var(--dark-gray);
-  color: var(--near-white);
-}
-.dark-themed a {
-  color: var(--near-white);
-}
-.dark-themed a:focus, .dark-themed a:hover {
-  color: var(--yellow);
-}
-.dark-themed a:active {
-  color: var(--red);
+  --yellow: rgb(253, 188, 75); /* icon yellow */
+  --red: rgb(218, 68, 83); /* icon red */
+  --blue: rgb(61, 174, 233); /* plasma blue */
 }
 
 * {
@@ -28,14 +21,39 @@
 body {
   font-family: sans-serif;
 
-  background-color: var(--light-gray);
+  background-color: var(--near-black);
 }
 
-header {
+a {
+  color: var(--blue);
+}
+a:link {
+}
+a:visited {
+}
+a:focus {
+  color: var(--yellow);
+}
+a:hover {
+  color: var(--yellow);
+}
+a:active {
+  color: var(--red);
+}
+
+header, footer, article {
+  background-color: var(--darker-gray);
+  color: var(--near-white);
+}
+
+header, footer {
   text-align: center;
 }
 header h1 {
   padding: 0.4em;
+}
+footer {
+  padding: 0.7em;
 }
 
 main {
@@ -57,8 +75,6 @@ article {
   padding-right: 1.3em;
 
   width: 37em;
-
-  background-color: var(--near-white);
 }
 article p {
   margin-top: 0.5em;
@@ -67,9 +83,4 @@ article p {
 /* prevent weird space from being under images */
 article img {
   display: block;
-}
-
-footer {
-  text-align: center;
-  padding: 0.7em;
 }
