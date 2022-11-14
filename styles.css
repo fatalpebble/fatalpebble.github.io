@@ -76,6 +76,10 @@ article {
 
   width: 37em;
 }
+article > div {
+  display: flex;
+  justify-content: space-between;
+}
 article > p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
